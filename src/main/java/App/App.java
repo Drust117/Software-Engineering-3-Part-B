@@ -18,7 +18,9 @@ public class App {
     
     public static void main(String[] args) {
            
+        //Creating the Course 
         Course BCT2 = new Course("Computer Science 2nd Year",new DateTime(2017, 9, 4,0,0), new DateTime(2018,5,11,0, 0));
+        //Creating each module and then adding them to the course
         Module SoftEng = new Module("Software Engineering 1", "CT202");
         BCT2.addModule(SoftEng);
                 
@@ -28,6 +30,7 @@ public class App {
         Module Networks = new Module("Networks", "CT250");
         BCT2.addModule(Networks);
         
+        //Creating each Student and adding them the each module
         Student student1 = new Student(19, "Joe Crowe", "Joe Crowe19", 123456, "10/04/1998");
         SoftEng.addStudent(student1);
         Programming.addStudent(student1);
@@ -43,9 +46,11 @@ public class App {
         Programming.addStudent(student3);
         Networks.addStudent(student3);
         
+        //Printing out the details on what modules the course has
         System.out.println(BCT2.getCourseName() + " which starts on: " +BCT2.getStartDate()+ " and ends on: "+BCT2.getEndDate()+"has the following modules:");
         BCT2.printModules();
         
+        //Printing out the details on what students are in each module
         System.out.println(SoftEng.getModuleName() + " has the following students:");
         SoftEng.printStudents();
         
